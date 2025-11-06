@@ -440,7 +440,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: const Text('إلغاء الحجز'),
               onPressed: () {
-                // نفس كود الإلغاء بالظبط
+                
                 device.status = DeviceStatus.available;
                 device.customerName = null;
                 device.bookingEndTime = null;
@@ -456,7 +456,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-// دالة مساعدة عشان تبني الأزرار جوه الـ Dialog
+
   Widget _buildEndOpenSessionButton(BuildContext context, Device device,
       String label, int minutes, GameMode gameMode, Color color) {
     return Padding(
@@ -473,7 +473,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-// دالة بتسجل الإحصائيات وبتصفر الجهاز
+// method بتسجل الإحصائيات وبتصفر الجهاز
   void _finalizeOpenSession(Device device, int minutes, GameMode gameMode) {
     // نفس لوجيك الإحصائيات بالظبط اللي في _bookDevice
     if (device.type == DeviceType.playstation) {
@@ -495,7 +495,7 @@ class _HomeScreenState extends State<HomeScreen> {
     device.status = DeviceStatus.available;
     device.customerName = null;
     device.bookingEndTime = null;
-    device.bookingStartTime = null; // <-- أهم حاجة: بنصفر وقت البدء
+    device.bookingStartTime = null; 
 
     device.save();
   }
@@ -636,7 +636,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         // ده وقت مفتوح، اعرض Dialog الحساب
                         _showEndOpenSessionDialog(device);
                       } else {
-                        // ده وقت محدد، اعرض Dialog الإنهاء العادي
+                        
                         _showEndSessionDialog(device);
                       }
                     }
