@@ -12,13 +12,13 @@ class TotalStatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ---- تصحيح وحساب إجماليات البلايستيشن ----
+  
     int totalPsHalfSingle =
         devices.fold(0, (sum, d) => sum + d.halfHourPlayersSINGLE);
-    // تصحيح: كان يستخدم fullHourPlayersMULTI بالخطأ
+  
     int totalPsHalfMulti =
         devices.fold(0, (sum, d) => sum + d.halfHourPlayersMULTI);
-    // تصحيح: كان يستخدم halfHourPlayersMULTI بالخطأ
+   
     int totalPsFullSingle =
         devices.fold(0, (sum, d) => sum + d.fullHourPlayersSINGLE);
     int totalPsFullMulti =
@@ -28,22 +28,22 @@ class TotalStatsScreen extends StatelessWidget {
     int totalhourAndHalfPlayersMulti =
         devices.fold(0, (sum, d) => sum + d.hourAndHalfPlayersMulti);
 
-    // ---- تصحيح وحساب إجماليات الـ VR ----
+
     int totalVrGame = devices.fold(0, (sum, d) => sum + d.vrGame);
-    // تصحيح: كان يستخدم vrGame بالخطأ
+    
     int totalVrTime = devices.fold(0, (sum, d) => sum + d.vrTime);
     int totalWheelsGame = devices.fold(0, (sum, d) => sum + d.wheelsgame);
-    // تصحيح: كان يستخدم vrGame بالخطأ
+
     int totalWheelsTime = devices.fold(0, (sum, d) => sum + d.wheelsTime);
-    // ---- حساب الإجمالي ----
+    -
     double totalPlayStationIncome = (totalPsHalfSingle * 25) +
         (totalPsHalfMulti * 35) +
         (totalPsFullSingle * 40) +
         (totalPsFullMulti * 60) +
         (totalhourAndHalfPlayersSingle * 60) +
-        (totalhourAndHalfPlayersMulti * 90); // افترض أسعارًا للخدمات
+        (totalhourAndHalfPlayersMulti * 90); 
     double totalVRIncome = (totalVrGame * 15) + (totalVrTime * 50);
-    // افترض أسعارًا للخدمات
+    
     double totalWheelsIncome = (totalWheelsGame * 20) + (totalWheelsTime * 60);
     double grandTotalIncome =
         totalPlayStationIncome + totalVRIncome + totalWheelsIncome;
@@ -76,7 +76,7 @@ class TotalStatsScreen extends StatelessWidget {
             const Divider(),
             const SizedBox(height: 10),
 
-            // قسم الواقع الافتراضي
+            
             _buildSectionHeader(
                 'الواقع الافتراضي (VR)', Icons.remove_red_eye, Colors.cyan),
             _buildStatRow('عدد مرات (جيم)', totalVrGame, Colors.cyan),
@@ -86,7 +86,7 @@ class TotalStatsScreen extends StatelessWidget {
             const SizedBox(height: 20),
             const Divider(thickness: 2),
 
-            // قسم الدركسيون
+           
             _buildSectionHeader(
                 'الدركسيون', Icons.drive_eta_outlined, Colors.cyan),
             _buildStatRow('عدد مرات (جيم)', totalWheelsGame, Colors.cyan),
@@ -98,7 +98,7 @@ class TotalStatsScreen extends StatelessWidget {
             const Divider(thickness: 2),
             const SizedBox(height: 10),
 
-            // الإجمالي الكلي
+            
             _buildTotalRow('الإجمالي الكلي للدخل', grandTotalIncome, 'جنيه',
                 isGrandTotal: true),
             const SizedBox(height: 50),
