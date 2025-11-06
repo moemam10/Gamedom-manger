@@ -1,0 +1,91 @@
+# Miscellaneous
+*.class
+*.log
+*.lock
+*.pot
+*.rb
+*.bat
+*.command
+*.csh
+*.exe
+*.fish
+*.SH
+*.SH.CMD
+*.sh
+*.ps1
+*.psm1
+*.psd1
+*.ps1xml
+*.psc1
+*.pssc
+*.reg
+*.rgs
+*.vbs
+*.ws
+*.wsf
+*.pyc
+*.pyo
+*.swp
+*~
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Android/build
+.gradle/
+build/
+# Android/gradle
+gradle/
+gradlew
+gradlew.bat
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/ios/Flutter/App.framework
+/ios/Flutter/Flutter.framework
+/iosServices/
+flutter_service.isolate*
+
+# iOS/XCode
+.build/
+DerivedData/
+*.hmap
+*.xccheckout
+*.xcscmblueprint
+*.xcscheme
+*.xcscheme
+*.xcworkspace
+xcuserdata/
+# Obfuscated IPA files
+*.ipa.dSYM/
+*.ipa
+
+# Android Studio
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+*.aab
+*.json
+*.jar
+*.keystore
+*key.properties
