@@ -1,10 +1,10 @@
 import 'package:hive/hive.dart';
 
-part 'devices.g.dart'; // هذا السطر مهم جدًا
+part 'devices.g.dart'; 
 
-@HiveType(typeId: 1) // typeId فريد لكل كائن
+@HiveType(typeId: 1) 
 class Device extends HiveObject {
-  // يجب أن يمتد من HiveObject
+ 
   @HiveField(0)
   final String id;
 
@@ -76,7 +76,7 @@ class Device extends HiveObject {
   }) : waitingList = waitingList ?? [];
 }
 
-// يجب أيضًا إنشاء Adapters للـ Enums
+
 @HiveType(typeId: 2)
 enum DeviceType {
   @HiveField(0)
